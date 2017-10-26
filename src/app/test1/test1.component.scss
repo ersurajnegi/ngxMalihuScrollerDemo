@@ -1,0 +1,55 @@
+
+$bg-color: black;
+$custom-dark: #333;
+$custom-light: #ddd;
+
+.jumbotron
+{
+  padding: 20px;
+  h3
+  {
+    margin:10px;
+  }
+}
+h4.name
+{
+  color: $custom-light;
+  margin: 5px auto;
+  &:before
+  {
+    content: "'";
+  }
+
+  &:after
+  {
+    content: "'";
+  }
+}
+hr
+{
+  margin:0;
+}
+[malihuCustomScroller] {
+    border: 1px solid $bg-color;
+    border-radius: 6px;
+    height: 400px;
+    line-height: 24px;
+    max-height: 500px;
+    padding: 16px;
+    margin: 10px 0;
+
+    &.custom-dark {
+      background: $custom-dark;
+      color: $custom-light
+    }
+
+    &.custom-light {
+      background: $custom-light;
+      color: $custom-dark;
+      hr
+      {
+        border-color:$custom-dark;
+      }
+    }
+   
+  }   
