@@ -6,13 +6,13 @@
         <h3>ngx-malihu-scroller Demo</h3>
         <hr>
       </div>
-      <button [routerLink]="['/test2']">Click Me!</button>
+      <!-- <button [routerLink]="['/test2']">Click Me!</button>
       <button (click)="click()">Destory Me!</button>
-      <button (click)="refresh()">Destory Me!</button>
+      <button (click)="refresh()">Destory Me!</button> -->
       <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3" *ngFor="let theme of themesArray;let i=index;">
         <h4 class="name">{{theme.theme}}</h4>
         <hr>
-        <div malihuCustomScroller [scrollOptions]="theme" class="{{theme.customClass}}" (onTotalScrollBack)="myfunc()">
+        <div malihuCustomScroller [scrollOptions]="theme" class="{{theme.customClass}}" (whileScrolling)="myfunc()">
           {{text}}
           <br/> End Of Content.
         </div>
